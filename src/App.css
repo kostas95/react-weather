@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    padding: 0;
+    background: #f3f3f3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-screen {
+    color: #000;
+    background: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    background-color: #5595ff;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 6rem;
+    font-size: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 1.5rem; /* Horizontal padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem; /* Adjust padding for smaller screens */
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Basic Input Styling */
+select {
+    width: 50%; /* Full width of the container */
+    padding: 0.75rem 1rem; /* Padding inside the input */
+    border: 1px solid #ccc; /* Border color and style */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Font size for the input text */
+    color: #333; /* Text color */
+    background-color: #fff; /* Background color */
+    box-sizing: border-box; /* Include padding and border in total width and height */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and shadow */
+}
+
+/* Basic icon styling */
+.icon {
+    font-size: 5rem; /* Adjust the size of the icon */
+    color: #333; /* Set the color of the icon */
+    margin: 0.5rem; /* Add some space around the icon */
+    vertical-align: middle; /* Align the icon with surrounding text */
+}
+
+/* Different colors for different weather conditions */
+.icon.sunny {
+    color: #ffcc00; /* Bright yellow for sunny weather */
+}
+
+.icon.cloudy {
+    color: #cccccc; /* Light gray for cloudy weather */
+}
+
+.icon.rainy {
+    color: #007bff; /* Blue for rainy weather */
+}
+
+.icon.windy {
+    color: #00aaff; /* Light blue for windy weather */
+}
+
+h1 {
+    font-size: 2.5rem; /* Adjust the size of the heading */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Set the text color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    text-align: center; /* Center the text */
+    margin: 2rem;
+}
+
+.grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 1fr; /* Makes sure rows are responsive */
+    gap: 2rem; /* Optional: Adds spacing between grid items */
+    place-items: center;
+    width: 50%; /* Ensures the item fills the grid cell */
+}
+
+.grid span {
+    width: 100%; /* Ensures the item fills the grid cell */
+    aspect-ratio: 2; /* Maintains a 1:1 aspect ratio (square) */
+    background-color: #f0f0f0; /* Background color for visibility */
+    border: 2px solid #333; /* Border styling */
+    border-radius: 8px; /* Rounded corners */
+    display: flex; /* Centers content horizontally and vertically */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.temperature-container {
+    display: flex;
+    align-items: baseline; /* Align items along the baseline */
+    justify-content: center; /* Center the items horizontally */
+    font-family: Arial, sans-serif; /* Choose a font family */
+}
+
+.temperature-value {
+    font-size: 3rem; /* Large font size for the temperature value */
+    font-weight: bold; /* Bold text for emphasis */
+    color: black; /* Color for the temperature value */
+    margin-right: 0.5rem; /* Space between value and unit */
+}
+
+.temperature-unit {
+    font-size: 3.5rem; /* Smaller font size for the unit */
+    color: grey; /* Color for the unit */
 }
